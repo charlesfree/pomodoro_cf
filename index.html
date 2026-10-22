@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Lets the page handle emoji and special characters -->
+  <meta charset="UTF-8" />
+  <!-- Makes the layout scale correctly on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pomodoro Timer</title>
+  <!-- Connects the CSS file (looks) -->
+  <link href="styles.css" rel="stylesheet" />
+  <!-- Connects the JS file (behavior). -->
+  <!-- "defer" waits until the HTML below exists before running the script, -->
+  <!-- so getElementById won't return null. -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Outer box. JS adds a "break" class to it to change the color scheme. -->
+  <main id="app">
+    <h1>Pomodoro</h1>
+
+    <!-- Shows "Work" or "Break". JS updates this text. -->
+    <p id="mode-label">Work</p>
+
+    <!-- The countdown itself. JS rewrites this every second. -->
+    <p id="timer">25:00</p>
+
+    <!-- Three buttons. JS attaches a click listener to each one by id. -->
+    <div id="controls">
+      <button id="start-button">Start</button>
+      <button id="pause-button">Pause</button>
+      <button id="reset-button">Reset</button>
+    </div>
+
+    <!-- How many work sessions you've finished. JS updates the number. -->
+    <p id="session-count">Sessions completed: 0</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,74 @@
+/* Center everything on the page and set a base font */
+body {
+  font-family: system-ui, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/* The main card. Default colors are the "work" theme. */
+/* "transition" fades the color change when switching modes. */
+#app {
+  text-align: center;
+  padding: 40px 60px;
+  border-radius: 16px;
+  background-color: #e74c3c;
+  color: white;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* When JS adds class="break" to #app, these colors override the ones above. */
+/* This is the "toggle a class instead of setting .style" approach. */
+#app.break {
+  background-color: #27ae60;
+}
+
+/* Big countdown digits */
+#timer {
+  font-size: 6rem;
+  font-weight: bold;
+  margin: 10px 0;
+  /* Keeps every digit the same width so the numbers don't jiggle */
+  font-variant-numeric: tabular-nums;
+}
+
+/* "Work" / "Break" label */
+#mode-label {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* Space between the buttons */
+#controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Button styling */
+button {
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+/* Fills the button in on hover */
+button:hover {
+  background: white;
+  color: #333;
+}
+
+/* Grayed-out look for a button JS has disabled */
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
